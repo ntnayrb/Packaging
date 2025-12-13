@@ -1,7 +1,7 @@
 Name:           john-jumbo
 Summary:        John the Ripper password cracker
 Version:        1.9.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 
 %bcond_without  check
 
@@ -32,7 +32,7 @@ sed -i 's#\$JOHN/john.conf#%{_sysconfdir}/john.conf#' src/params.h
 
 %build
 pushd src
-%configure
+%configure --disable-native-tests
 %make_build -s clean
 %make_build
 popd
@@ -83,7 +83,11 @@ rm doc/INSTALL
 # https://build.opensuse.org/projects/openSUSE:Factory/packages/john/files/john.spec
 
 %changelog
-* Sat Dec 13 2025 ntnayrb 1.9.0-2
+* Sat Dec 13 2025 Bryant Niederriter <43710787+ntnayrb@users.noreply.github.com>
+- add %configure --disable-native-tests so that the final binary will run on x86_64-v2
+- 
+
+* Sat Dec 13 2025 ntnayrb 1.9.0-3
 - new package built with tito
 
 * Mon Dec 8 2025 Bryant Niederriter <43710787+ntnayrb@users.noreply.github.com> - 1.9.0-1
