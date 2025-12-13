@@ -1,0 +1,20 @@
+--- blake2.h	2025-12-07 17:58:14.645012725 -0500
++++ john-1.9.0-jumbo-1/src/blake2.h	2025-12-07 18:00:16.582561160 -0500
+@@ -57,7 +57,7 @@
+     uint8_t  personal[BLAKE2S_PERSONALBYTES];  // 32
+   } blake2s_param;
+ 
+-  JTR_ALIGN( 64 ) typedef struct __blake2s_state
++  typedef struct JTR_ALIGN( 64 ) __blake2s_state
+   {
+     uint32_t h[8];
+     uint32_t t[2];
+@@ -82,7 +82,7 @@
+     uint8_t  personal[BLAKE2B_PERSONALBYTES];  // 64
+   } blake2b_param;
+ 
+-  JTR_ALIGN( 64 ) typedef struct __blake2b_state
++  typedef struct JTR_ALIGN( 64 ) __blake2b_state
+   {
+     uint64_t h[8];
+     uint64_t t[2];
