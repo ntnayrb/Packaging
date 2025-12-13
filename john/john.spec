@@ -14,6 +14,7 @@ BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  gnupg2
 BuildRequires:  libxcrypt-devel
+BuildRequires:  openssl-devel
 BuildRequires:  zlib-devel
 BuildRequires:  bzip2-devel
 
