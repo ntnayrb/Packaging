@@ -83,5 +83,8 @@ rm doc/INSTALL
 # https://build.opensuse.org/projects/openSUSE:Factory/packages/john/files/john.spec
 
 %changelog
+* Sat Dec 13 2025 ntnayrb 1.9.0-1
+- new package built with tito
+
 * Mon Dec 8 2025 Bryant Niederriter <43710787+ntnayrb@users.noreply.github.com> - 1.9.0-1
 - Initial build derived from the main Fedora package, with influence from OpenSUSE:Factory
